@@ -10,6 +10,6 @@
     "govuk-prototype-kit": "13.20.5"
   },
   "devDependencies": {
-    "prettier-plugin-nunjucks": "^0.2.1"
+    "prettier-plugin-nunjucks": "^0.2.3"
   }
 }
