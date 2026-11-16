@@ -1,0 +1,9 @@
+{
+  "serviceName": "Preparing for registration",
+  "useServiceNavigation": true,
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
+}

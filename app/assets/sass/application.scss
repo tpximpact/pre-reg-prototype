@@ -1,0 +1,173 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+//
+
+// Add extra styles here
+// Language toggle aligned right under phase banner
+.app-language-toggle {
+  text-align: right;
+  padding-top: govuk-spacing(2);
+  padding-bottom: govuk-spacing(2);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+// 1. Full-width blue Work Hub hero banner
+.app-workhub-hero {
+  background-color: govuk-colour("blue");
+  color: govuk-colour("white");
+  padding-top: govuk-spacing(6);
+  padding-bottom: govuk-spacing(6);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.app-workhub-hero__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-workhub-hero__title {
+  color: govuk-colour("white");
+  margin-bottom: govuk-spacing(3);
+}
+
+.app-workhub-hero__subtitle {
+  color: govuk-colour("white");
+  margin-bottom: 0;
+}
+
+.app-workhub-hero__illustration svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+// 2. Circular arrow action links
+.app-action-links li {
+  margin-bottom: govuk-spacing(3);
+}
+
+.app-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: govuk-spacing(2);
+  font-weight: 700;
+  text-decoration: none;
+  color: $govuk-link-colour;
+
+  &:hover .app-action-link__text {
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    text-underline-offset: 0.1578em;
+  }
+
+  &:focus {
+    background-color: $govuk-focus-colour;
+    color: $govuk-focus-text-colour;
+    box-shadow:
+      0 -2px $govuk-focus-colour,
+      0 4px $govuk-focus-text-colour;
+    outline: 3px solid transparent;
+  }
+}
+
+.app-action-link--black {
+  color: $govuk-text-colour;
+}
+
+.app-action-link__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+// 3. Light-blue "Chat with AI" panel
+.app-ai-banner {
+  background-color: #e8f1f8;
+  padding: govuk-spacing(6);
+}
+
+// 4. Pastel 2x2 scenario cards
+.app-scenario-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-scenario-card {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding: govuk-spacing(5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.app-scenario-card--yellow {
+  background-color: #fdf6d8;
+}
+
+.app-scenario-card--blue {
+  background-color: #e3eef7;
+}
+
+.app-scenario-card--purple {
+  background-color: #ebe6f5;
+}
+
+.app-scenario-card--teal {
+  background-color: #e1f0ef;
+}
+
+.app-scenario-card__content {
+  position: relative;
+  z-index: 1;
+  max-width: 78%;
+}
+
+.app-scenario-card__art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+// White "Explore >" button inside scenario cards
+.app-explore-btn {
+  display: inline-block;
+  background-color: govuk-colour("white");
+  color: $govuk-link-colour;
+  font-weight: 700;
+  text-decoration: none;
+  padding: govuk-spacing(2) govuk-spacing(3);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    background-color: govuk-colour("light-grey");
+  }
+
+  &:focus {
+    background-color: $govuk-focus-colour;
+    color: $govuk-focus-text-colour;
+    outline: 3px solid transparent;
+  }
+}
+
+// 5. Light-grey feedback banner
+.app-feedback-banner {
+  background-color: govuk-colour("light-grey");
+  padding: govuk-spacing(6);
+}

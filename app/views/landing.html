@@ -1,0 +1,509 @@
+{% extends "layouts/main.html" %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% set pageName = "Home – Are you ready to register?" %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "#",
+    navigation: [
+      {
+        href: "#",
+        text: "Sign in"
+      }
+    ]
+  }) }}
+
+  {{ govukServiceNavigation({
+    navigation: [
+      {
+        href: "#",
+        text: "Home",
+        active: true
+      },
+      {
+        href: "#",
+        text: "AI work assistant"
+      },
+      {
+        href: "#",
+        text: "Build a business plan"
+      },
+      {
+        href: "#",
+        text: "Mentorship"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block main %}
+  <main
+    id="main-content"
+    class="govuk-main-wrapper govuk-!-padding-top-0"
+    role="main"
+  >
+
+    {# PHASE BANNER & LANGUAGE TOGGLE #}
+    <div class="govuk-width-container">
+      {{ govukPhaseBanner({
+        tag: {
+          text: "Beta"
+        },
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>.'
+      }) }}
+
+      <div class="app-language-toggle">
+        <span class="govuk-body-s govuk-!-font-weight-bold">English</span>
+        <span class="govuk-body-s" aria-hidden="true">|</span>
+        <a class="govuk-link govuk-body-s" href="#" lang="cy">Cymraeg</a>
+      </div>
+    </div>
+
+    {# 1. FULL-WIDTH BLUE HERO BANNER #}
+    <div class="app-workhub-hero">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row app-workhub-hero__row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl app-workhub-hero__title">
+              Are you ready to register your business?
+            </h1>
+            <p class="govuk-body-l app-workhub-hero__subtitle">
+              Understand the right business structure for you.
+            </p>
+          </div>
+          <div
+            class="govuk-grid-column-one-third app-workhub-hero__illusfftration"
+          >
+            <svg
+              viewBox="0 0 280 170"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect
+                x="20"
+                y="15"
+                width="240"
+                height="140"
+                rx="4"
+                fill="#6ea8dc"
+              />
+              <rect x="35" y="30" width="90" height="110" fill="#ffffff" />
+              <rect x="140" y="30" width="105" height="65" fill="#9bc4e8" />
+              <circle cx="80" cy="65" r="16" fill="#0b0c0c" />
+              <path
+                d="M55 140C55 118 66 105 80 105C94 105 105 118 105 140H55Z"
+                fill="#f47738"
+              />
+              <circle cx="155" cy="75" r="14" fill="#0b0c0c" />
+              <path
+                d="M132 140C132 120 142 108 155 108C168 108 178 120 178 140H132Z"
+                fill="#ffdd00"
+              />
+              <circle cx="215" cy="80" r="14" fill="#0b0c0c" />
+              <path
+                d="M192 140C192 122 202 110 215 110C228 110 238 122 238 140H192Z"
+                fill="#00703c"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-width-container govuk-!-margin-top-7">
+
+      {# 2. HOW WE CAN HELP LIST #}
+      <div class="govuk-grid-row govuk-!-margin-bottom-7">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-4">
+            How we can help:
+          </h2>
+          <ul class="govuk-list app-action-links">
+            <li>
+              <a class="app-action-link" href="#">
+                <span class="app-action-link__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12" fill="#0b0c0c" />
+                    <path
+                      d="M10 7l5 5-5 5M7 12h8"
+                      stroke="#fff"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+                <span class="app-action-link__text">
+                  Personalise with AI work assistant
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="app-action-link" href="#">
+                <span class="app-action-link__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12" fill="#0b0c0c" />
+                    <path
+                      d="M10 7l5 5-5 5M7 12h8"
+                      stroke="#fff"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+                <span class="app-action-link__text">Build a business plan</span>
+              </a>
+            </li>
+            <li>
+              <a class="app-action-link" href="#">
+                <span class="app-action-link__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12" fill="#0b0c0c" />
+                    <path
+                      d="M10 7l5 5-5 5M7 12h8"
+                      stroke="#fff"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+                <span class="app-action-link__text">
+                  Understand your archetype
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="app-action-link" href="#">
+                <span class="app-action-link__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12" fill="#0b0c0c" />
+                    <path
+                      d="M10 7l5 5-5 5M7 12h8"
+                      stroke="#fff"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+                <span class="app-action-link__text">
+                  Find a mentor (opens in new tab)
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {# 3. CHAT WITH AI CALLOUT BOX #}
+      <div class="app-ai-banner govuk-!-margin-bottom-9">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div
+              class="app-ai-banner__icon govuk-!-margin-bottom-3"
+              aria-hidden="true"
+            >
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path
+                  d="M24 6C13.5 6 5 13.2 5 22C5 26.8 7.5 31.1 11.5 34L9 42L17.8 37.5C19.8 37.8 21.9 38 24 38C34.5 38 43 30.8 43 22C43 13.2 34.5 6 24 6Z"
+                  fill="#003078"
+                />
+                <circle cx="17" cy="22" r="2.5" fill="#ffffff" />
+                <circle cx="24" cy="22" r="2.5" fill="#ffffff" />
+                <circle cx="31" cy="22" r="2.5" fill="#ffffff" />
+              </svg>
+            </div>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+              Chat with AI
+            </h2>
+            <p class="govuk-body govuk-!-margin-bottom-0">
+              Choose what you'd like help with to start a chat.
+            </p>
+          </div>
+
+          <div class="govuk-grid-column-one-half">
+            <ul class="govuk-list app-action-links govuk-!-margin-bottom-0">
+              <li>
+                <a class="app-action-link app-action-link--black" href="#">
+                  <span class="app-action-link__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="12" fill="#1d70b8" />
+                      <path
+                        d="M10 7l5 5-5 5M7 12h8"
+                        stroke="#fff"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                  <span class="app-action-link__text">
+                    Check what you already know
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="app-action-link app-action-link--black" href="#">
+                  <span class="app-action-link__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="12" fill="#1d70b8" />
+                      <path
+                        d="M10 7l5 5-5 5M7 12h8"
+                        stroke="#fff"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                  <span class="app-action-link__text">
+                    Compare business structures
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="app-action-link app-action-link--black" href="#">
+                  <span class="app-action-link__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="12" fill="#1d70b8" />
+                      <path
+                        d="M10 7l5 5-5 5M7 12h8"
+                        stroke="#fff"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                  <span class="app-action-link__text">
+                    Find a mentor in your area
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="app-action-link app-action-link--black" href="#">
+                  <span class="app-action-link__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="12" fill="#1d70b8" />
+                      <path
+                        d="M10 7l5 5-5 5M7 12h8"
+                        stroke="#fff"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                  <span class="app-action-link__text">
+                    Route to the right place
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {# 4. NOT SURE WHERE TO START? (2x2 SCENARIO CARDS) #}
+      <div class="govuk-!-text-align-centre govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          Not sure where to start?
+        </h2>
+        <p class="govuk-body">Try one of these options</p>
+      </div>
+
+      <div class="govuk-grid-row app-scenario-grid">
+        {# Card 1: Pale Yellow #}
+        <div class="govuk-grid-column-one-half govuk-!-margin-bottom-5">
+          <div class="app-scenario-card app-scenario-card--yellow">
+            <div class="app-scenario-card__content">
+              <h3 class="govuk-heading-m">
+                I'm a beginner, I don't know know where to start.
+              </h3>
+              <p class="govuk-body-s govuk-!-margin-bottom-1">
+                We can help you:
+              </p>
+              <ul
+                class="govuk-list govuk-list--bullet govuk-body-s govuk-!-margin-bottom-4"
+              >
+                <li>know where to start</li>
+                <li>identify gaps in your knowledge</li>
+                <li>feel more confident</li>
+              </ul>
+              <a class="app-explore-btn" href="#">
+                Explore
+                <span aria-hidden="true">&gt;</span>
+              </a>
+            </div>
+            <div class="app-scenario-card__art" aria-hidden="true">
+              <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
+                <circle cx="35" cy="30" r="16" fill="#1d70b8" />
+                <circle cx="29" cy="30" r="2" fill="#fff" />
+                <circle cx="35" cy="30" r="2" fill="#fff" />
+                <circle cx="41" cy="30" r="2" fill="#fff" />
+                <circle cx="72" cy="52" r="13" fill="#0b0c0c" />
+                <path
+                  d="M50 110C50 90 60 78 72 78C84 78 94 90 94 110H50Z"
+                  fill="#00703c"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {# Card 2: Pale Blue #}
+        <div class="govuk-grid-column-one-half govuk-!-margin-bottom-5">
+          <div class="app-scenario-card app-scenario-card--blue">
+            <div class="app-scenario-card__content">
+              <h3 class="govuk-heading-m">
+                I know a bit, but unsure if I should be a sole trader or limited company.
+              </h3>
+              <p class="govuk-body-s govuk-!-margin-bottom-1">
+                We can help you:
+              </p>
+              <ul
+                class="govuk-list govuk-list--bullet govuk-body-s govuk-!-margin-bottom-4"
+              >
+                <li>benefit</li>
+                <li>benefit</li>
+                <li>benefit</li>
+              </ul>
+              <a class="app-explore-btn" href="#">
+                Explore
+                <span aria-hidden="true">&gt;</span>
+              </a>
+            </div>
+            <div class="app-scenario-card__art" aria-hidden="true">
+              <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
+                <rect x="65" y="25" width="18" height="18" fill="#ffdd00" />
+                <rect x="86" y="32" width="18" height="18" fill="#ffdd00" />
+                <rect x="68" y="48" width="18" height="18" fill="#ffdd00" />
+                <circle cx="45" cy="58" r="12" fill="#0b0c0c" />
+                <path
+                  d="M26 110C26 92 34 80 45 80C56 80 64 92 64 110H26Z"
+                  fill="#1d70b8"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row app-scenario-grid govuk-!-margin-bottom-6">
+        {# Card 3: Pale Purple #}
+        <div class="govuk-grid-column-one-half govuk-!-margin-bottom-5">
+          <div class="app-scenario-card app-scenario-card--purple">
+            <div class="app-scenario-card__content">
+              <h3 class="govuk-heading-m">
+                I've reseached a lot, but I need to understand financial terminology.
+              </h3>
+              <p class="govuk-body-s govuk-!-margin-bottom-1">
+                We can help you:
+              </p>
+              <ul
+                class="govuk-list govuk-list--bullet govuk-body-s govuk-!-margin-bottom-4"
+              >
+                <li>benefit</li>
+                <li>benefit</li>
+                <li>benefit</li>
+              </ul>
+              <a class="app-explore-btn" href="#">
+                Explore
+                <span aria-hidden="true">&gt;</span>
+              </a>
+            </div>
+            <div class="app-scenario-card__art" aria-hidden="true">
+              <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
+                <circle cx="72" cy="48" r="13" fill="#0b0c0c" />
+                <path
+                  d="M52 110C52 90 61 76 72 76C83 76 92 90 92 110H52Z"
+                  fill="#4c2c92"
+                />
+                <path
+                  d="M22 82L30 105H52"
+                  stroke="#0b0c0c"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {# Card 4: Pale Teal #}
+        <div class="govuk-grid-column-one-half govuk-!-margin-bottom-5">
+          <div class="app-scenario-card app-scenario-card--teal">
+            <div class="app-scenario-card__content">
+              <h3 class="govuk-heading-m">
+                I know what I'm going to do, but what does the future look like?
+              </h3>
+              <p class="govuk-body-s govuk-!-margin-bottom-1">
+                We can help you:
+              </p>
+              <ul
+                class="govuk-list govuk-list--bullet govuk-body-s govuk-!-margin-bottom-4"
+              >
+                <li>benefit</li>
+                <li>benefit</li>
+                <li>benefit</li>
+              </ul>
+              <a class="app-explore-btn" href="#">
+                Explore
+                <span aria-hidden="true">&gt;</span>
+              </a>
+            </div>
+            <div class="app-scenario-card__art" aria-hidden="true">
+              <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
+                <rect
+                  x="75"
+                  y="25"
+                  width="22"
+                  height="22"
+                  rx="3"
+                  fill="#1d70b8"
+                />
+                <path
+                  d="M81 36L85 40L92 32"
+                  stroke="#fff"
+                  stroke-width="2.5"
+                  fill="none"
+                />
+                <circle cx="42" cy="56" r="12" fill="#0b0c0c" />
+                <path
+                  d="M24 110C24 92 32 80 42 80C52 80 60 92 60 110H24Z"
+                  fill="#00703c"
+                />
+                <circle cx="76" cy="58" r="12" fill="#0b0c0c" />
+                <path
+                  d="M58 110C58 92 66 80 76 80C86 80 94 92 94 110H58Z"
+                  fill="#f47738"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# 5. GIVE US FEEDBACK BANNER #}
+      <div
+        class="app-feedback-banner govuk-!-text-align-centre govuk-!-margin-bottom-6"
+      >
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          Give us feedback
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-4">
+          This is a new service. Your feedback will help us improve it.
+        </p>
+        <a
+          class="govuk-button govuk-!-margin-bottom-0"
+          href="#"
+          role="button"
+          draggable="false"
+          data-module="govuk-button"
+        >
+          Give feedback
+        </a>
+      </div>
+
+    </div>
+  </main>
+{% endblock %}
